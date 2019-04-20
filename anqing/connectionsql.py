@@ -38,5 +38,5 @@ cur.execute(sql4)
 resList = cur.fetchall()#fetchall()是接收全部的返回结果行
 conn.close()
 print(resList[0])
-print('end')
-
+print('test successful')
+print('test successful')
