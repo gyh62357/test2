@@ -30,15 +30,11 @@ if not cur:
 # cur.execute(sql3)
 # conn.commit()
 
-x=('F1', 'F2', 'F3')
-# 查找,结果按照id排序
-sql4 = 'select '+ 2*'%s,'%x[:-1]+'%s'%x[-1] +' from Sheet1'
-print(sql4)
+# x=('F1', 'F2', 'F3')
+# # 查找,结果按照id排序
+# sql4 = 'select '+ 2*'%s,'%x[:-1]+'%s'%x[-1] +' from T_ZL_YuCeData'
+sql4 = 'select * from T_ZL_YuCeData'
 cur.execute(sql4)
 resList = cur.fetchall()#fetchall()是接收全部的返回结果行
 conn.close()
 print(resList[0])
-print('test successful')
-print('郑州轻工业大学')
-print('郑州轻工业大学')
-print('郑州轻工业大学')
