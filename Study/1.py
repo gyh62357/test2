@@ -2,4 +2,5 @@
 # @File  : 1.py
 # @Author: 郭迎辉
 # @Time  : 2019/3/28/02821:44
-# @Desc  : 
+# @Desc  :
+import matplotlib.pyplot as plt
