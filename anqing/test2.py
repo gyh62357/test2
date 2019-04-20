@@ -22,4 +22,4 @@ print(X,'\n',y)
 # plt.plot(X,y_pred, color='blue', linewidth=1.5) #线性回归预测趋势线
 
 # plt.show()
-
+print('test')
