@@ -1,0 +1,305 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta content="慧聪网(www.hc360.com)是一家提供B2B电子商务服务的网站,是企业网上交易的首选,提供最新供应,求购,代理,合作,二手,招标,库存,租赁等商机信息,通过行业专卖店,行业资讯,商务论坛,网商博客,商人社区,人才招聘提供企业信息服务" name="description"/>
+<meta content="慧聪网,行业门户,B2B,网上贸易,网上交易,交易市场,行业资讯,在线交易,买卖信息,商业信息,电子商务,产品,企业,商机,供应,求购,二手,代理,服务,行业论坛,商务网,商业贸易,产经要闻,商务指南,企业管理,研究" name="keyword"/>
+<title>慧聪网.登录</title>
+<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="//styles.hc360.com/css/my/style/regist/login-change2016.css"/>
+<script src="//styles.hc360.com/js/build/source/core/hc.common.min.js"></script>
+<script language="javascript" src="//sso.hc360.com/js/build/source/core/login.js"></script>
+<script src="//styles.hc360.com/js/build/module/captcha/captcha-1.0.min.js" type="text/javascript"></script>
+
+<script>
+$(function(){
+	   $.ajax({ 
+		     type : "GET", //提交方式 
+		     url : "//sso.hc360.com/qrcode",
+		     dataType:"html",
+		     success : function(result) {//返回数据根据结果进行相应的处理 
+		    	 $('#qrcode').attr('src',result);
+		     } 
+		    }); 
+})
+
+</script>
+</head>
+<body>
+
+<div class="Login_hd">
+<style>
+.Login_hd_rig{ float:right;}
+</style>
+	<h1><a href="http://www.hc360.com/" target="_blank"></a></h1>
+	<!-- <div class="hotline">
+		<p class="line1">客服热线&nbsp;400-6360-888</p>
+    	<p>010-80707000</p>
+	</div> -->
+	<div class="Login_hd_rig">
+    	<dl>
+        	<dt>关注慧聪微商城<br />领取物流大礼包</dt>
+            <dd><img id ="qrcode" src="" /></dd>
+        </dl>
+    </div>
+</div>
+
+<div class="layer_tcc" id="layer_tcc" style="display:none;top:0; left:0;z-index:10; position:absolute; ">
+	<h3>安装控件提示<span style="cursor:pointer;" onclick="javascript:document.getElementById('layer_tcc').style.display='none';">×</span></h3>
+	<div class="layer_tcc_info">
+		<p class="p_0">尊敬的会员，您使用的浏览器不支持安全控件，为了您的账户安全，建议您使用IE浏览器进行登录。</p>
+		<p class="btn_tcc_1"><button type="button" onclick="javascript:document.getElementById('layer_tcc').style.display='none';">知道了</button></p>
+	</div>
+</div>
+<div class="layer_tcc" id="layer_icc" style="display:none;top:0px; left:0;z-index:10; position:absolute; ">
+	<h3>安装控件提示<span style="cursor:pointer;"  onclick="javascript:document.getElementById('layer_icc').style.display='none';document.getElementById('securitybox').checked=false;loadfocus();">×</span></h3>
+	<div class="layer_tcc_info">
+		<p class="p_1">你需要安装安全控件，才可使用安全登录。</p>
+		<p class="p_2">&bull; 控件可对您的密码进行保护，提升账户安全性。</p>
+		<p class="p_3">&bull; 请点击“立即安装控件”按钮，并按提示进行安装。</p>
+		<p class="p_4">完成安装后，请<font color="red">重新启动浏览器。</font></p>
+		<p class="btn_tcc_2"><button onclick="hcsafesetup()" type="button">立即安装控件</button></p>
+	</div>
+</div>
+<input type="hidden" name="errinfo" value="" />
+<!--新版登录页面 S-->
+<div class="ConTent-box">
+
+	<!--新版登录页面左图 begin-->
+	
+
+
+<!-- 广告图片 -->
+
+
+<div class="login-banner" style="background-color: #0c84fe">
+    <div class="w990">
+        <div class="i-inner" style="background:url(https://img008.hc360.cn/k2/M0B/63/F5/wKhQxVytwBiEQrpRAAAAAAK-Jxw876.png) left top no-repeat "></div>
+        <a href="https://b2b.hc360.com/mmt/hjc/hjcIndex-m.html" class="spread" target="_blank" data-useractivelogs="UserBehavior_sso_reg" target="_blank"></a>
+    </div>
+</div>
+
+<!-- 	<div class="login-banner" style="background-color: #125dd0"> -->
+<!--         <div class="w990"> -->
+
+<!--             <a href="http://champion.hc360.com/champion/selfpay/activity.html" class="spread" target="_blank"></a> -->
+<!--         </div> -->
+<!--     </div> -->
+
+	<!--新版登录页面 左图end-->
+
+	<!--新版登录页面 正文-->
+	<div class="content">
+		<div class="w990 login">
+			<div class="vip-login-cont">
+				
+               	
+       			<div class="login-box">
+       				<div class="loginBoxNew">
+						<div class="logonTab">
+                            <dl>
+                                <dd class="tabCur">账户登录</dd>
+                                <dd identify-id="scanToLogin" >扫码登录</dd>
+                            </dl>
+                        </div>
+					<div class="ture-line-login" style="display:block;">
+<!-- 						<div class="vip-login-t"> -->
+<!-- 							<h2>会员登录</h2> -->
+<!-- 							<a href="http://reg.hc360.com/reg/info?sourcetypeid=3694" target="_blank" data-useractivelogs="UserBehavior_sso_reg">立即注册</a> -->
+<!-- 						</div> -->
+						
+				        <script src="//sso.hc360.com/js/btntimer.min.js"></script>
+							
+						<input type="hidden" id="stopTimer" value="" />
+						
+						<form id="loginForm" name="loginForm" method="post" identify-id="formSubmit">
+						
+							<input type="hidden" name="Passwd" id="Passwd" value="" />
+						
+							<div class="item-vip-txt">
+								<div class="error-warning" style="display:none;">
+								
+									<div class="icon-c"><p></p><span identify-id="loginErrorInfo"></span></div>
+								
+								</div>
+	                            
+								<div class="vip-login-inptxt">
+									
+									<input type="text" name="LoginID" id="LoginID" value="" tabindex="1"/>
+									<label identify-id="accountHint" style="display:block;">用户名/邮箱/手机号</label>
+								</div>
+								<div class="entry-hint">
+									<a id="timeDown" href="#" class="forget-userName" style="display:none;width:118px;">90秒后重试</a>
+									<a id="forgetUname" href="http://sso.hc360.com/LoginHelp.html" target="_blank" class="forget-userName" data-useractivelogs="UserBehavior_sso_findname">忘记用户名？</a>
+									<a id="mpCode" href="#" onclick="javascript:sendTemp('//sso.hc360.com');" class="forget-userName" style="display:none; color: #039;">发送动态口令</a>
+									<input type="hidden" id="ajaxLock"/>
+									<input type="hidden" id="regType" name="regType" />
+									<input type="hidden" id="validateLogin" name="validateLogin" />
+								</div>
+							</div>
+							<div class="item-vip-txt">
+								<div class="User-passWord" >
+									<input style="display:block;" type="password" id="password" tabindex="2" autocomplete="off" autofill="off" />
+									<label class="mg-l5" identify-id="passwordHint" style="display:block;" onkeydown="return disableEnter($(this),$('#formsub'),event)">密码</label>
+								</div>
+								<div class="entry-hint">
+	                                <a href="http://sso.hc360.com/VerifyLoginName.html" target="_blank" class="forget-passWord" data-useractivelogs="UserBehavior_sso_findpass">忘记密码？</a>
+	                            </div>
+							</div>
+							
+				 	   		<input type="hidden" name="aToken" value="8daf2747-7263-4fc0-a49b-7565fc7883e7"/>
+				 	  	
+							<div class="btm_submit">
+								<button class="J_Submit" id="formsub" data-useractivelogs="UserBehavior_sso_login" tabindex="5">登 录</button>
+								<script type="text/javascript" src="//sso.hc360.com/js/apply.js"></script>
+								<a class="J_RegBtn" id="regSubmit" href="http://reg.hc360.com/reg/info?sourcetypeid=3694" target="_blank" data-useractivelogs="UserBehavior_sso_reg">立即注册</a>
+								
+							</div>
+							 <div class="hotline"><p class="line1">客服热线&nbsp;400-6360-888&nbsp;&nbsp;010-80707000</p></div>
+							<!-- <div class="Public">
+                                <p>公告：慧聪已推出手机版~！快来体验！
+                                <a class="Moblie-hc" href="http://app.hc360.com/?adfr=denglu" target="_blank" data-useractivelogs="UserBehavior_sso_phonedownload"><s></s>手机慧聪 </a>
+                                </p>
+                            </div> -->
+							<input type="hidden" name="logincode" id="logincode" value="2013new" />
+					        <input type="hidden" name="loginparam" id="loginparam" value="" />
+							<input type="hidden" name="shopmanage" value="" />
+				        </form>
+			        
+			        </div>
+			        <div class="ture-line-login" style="display:none;">
+                            <p class="codePrompt">使用微信扫描下方二维码，安全登录慧聪账户</p>
+                            <div class="codeImgCon" id="qrcodenew">
+                                <dl>
+                                    <dt >
+                                    	<img src="https://styles.hc360.com/images/my/images/regist/login-2016/loading5.gif" identify-id="WechatLoginQEcode"/>
+                                    	 <div class="QR-code" identify-id="refreshQRcodeArea" style="display: none;">
+			                        		 <p class="codeBg"></p>
+					                         <div class="InvalidCon">
+					                             <p>二维码已失效</p>
+					                             <button type="submit" identify-id="refreshQRcodeBtn" data-useractivelogs="UserBehavior_sso_WXCodeRefresh">立即刷新</button>
+					                         </div> 
+                     					</div>
+                                    </dt>
+                                    <dd style="display:none"><img src="https://styles.hc360.com/images/my/images/regist/login-2016/iphone.png" /></dd>
+                                </dl>
+                            </div>
+                           
+                            <div class="ascendancyCon">
+                                <span class="aIco1">免输入</span>
+                                <span class="aIco2">更快</span>
+                                <span class="aIco3">更安全</span>
+                            </div>
+                    </div>
+		        </div><!--login-box-new end-->
+					<div class="other-login">
+				        <div class="other-enter">
+					        <p class="other-font">合作账户登录：</p>
+					        <ul>
+								<li class="ico-qq" title="腾讯企点登录" href="otherlg" data-useractivelogs="UserBehavior_sso_qqlogin"></li>
+								<li class="ico-sina" title="新浪微博登录" href="otherlg" data-useractivelogs="UserBehavior_sso_sinalogin"></li>
+<!-- 								<li class="ico-wx weChat-login-icon-hook" title="微信登录" href="otherlg" data-useractivelogs="UserBehavior_sso_weixinlogin"></li> -->
+							</ul>
+				        </div>
+				        
+<!-- 				       	<div class="Public"> -->
+<!-- 				       		<p>公告：慧聪已推出手机版~！快来体验！ -->
+<!-- 							<a class="Moblie-hc" href="http://app.hc360.com/?adfr=denglu" target="_blank" data-useractivelogs="UserBehavior_sso_phonedownload"><s></s>手机慧聪 </a> -->
+<!-- 							</p> -->
+<!-- 				        </div> -->
+<!-- 				        <div class="otherLogBox"> -->
+<!-- 							<a class="toWxLog" >切换至微信扫码登陆 </a> -->
+<!-- 				        </div> -->
+					</div>
+				</div><!--login-box end-->
+
+<!-- 				<div class="QR-code"> -->
+<!--                     <div class="title">使用微信扫描下方二维码，安全登录慧聪账户</div> -->
+<!--                     <div class="pic-help"> -->
+<!--                         <div class="pic"> -->
+<!--                             <img src="//styles.hc360.com/images/my/images/regist/login-2016/loading5.gif" alt="" identify-id="WechatLoginQEcode"> -->
+<!--                         </div> -->
+<!--                         <div class="hide-pic"> -->
+<!--                             <img src="//styles.hc360.com/images/my/images/regist/login-2016/QR-help.jpg" height="200" width="286" alt=""> -->
+<!--                         </div> -->
+<!--                         <span class="help">查看帮助</span> -->
+<!--                     </div> -->
+<!--                     <div class="codeInvalid" identify-id="refreshQRcodeArea" style="display: none;"> -->
+<!--                         <p class="codeBg"></p> -->
+<!--                         <div class="InvalidCon"> -->
+<!--                             <em></em> -->
+<!--                             <p>二维码失效</p> -->
+<!--                             <button type="submit" identify-id="refreshQRcodeBtn" data-useractivelogs="UserBehavior_sso_WXCodeRefresh">立即刷新</button> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!--                	</div> -->
+<!--                	<a style="outline: 0px none rgb(109, 109, 109);" href="javascript:;" class="qrcode-target btn-2qrcode" clstag="pageclick|keycount|20150112ABD_201505135|1" identify-id="scanToLogin" data-useractivelogs="UserBehavior_sso_newWXLogin">扫码登录</a> -->
+<!--                	<div class="otherLogBox"> -->
+<!-- 					<a class="toAccLog" style="display:none;">切换账号密码登陆 </a> -->
+<!-- 				</div> -->
+       			
+			</div><!--vip-login-cont end-->
+		</div><!--w990 login end-->
+	</div><!--LoginBox end-->
+</div><!--新版登录页面 End -->
+
+<!--新版登录页面 E-->
+<div class="l-message">
+    <div class="l-message-r">
+        <a href="http://wj.qq.com/survey.html?id=261995&hash=7515" target="_blank" data-useractivelogs="UserBehavior_sso_login4survey"><s></s>登录页面，调查问卷</a>
+    </div>
+</div>
+<!--ad-->
+<form id="wxloginForm" method="post" action="//sso.hc360.com/weixin">
+<input type="hidden" id="wxdata" name="data"/>
+</form>
+
+
+
+
+<!--  footer begin -->
+<div class="footer">
+	
+	<iframe width="100%" height="120" frameborder="0" src="https://sso.hc360.com/include/iframe_index_copyright.html" scrolling="no"></iframe>
+</div>
+<!--  footer end -->
+<script type="text/javascript" src="//styles.hc360.com/js/build/source/core/hc.control.js"></script>
+<script src="//styles.hc360.com/js/module/sso/hc.S-Login-page-POST-AccountPassword.min.js" charset="utf8"></script>
+<!--本地测试路径 <script src="https://sso.hc360.com/js/hc.S-Login-page-POST-AccountPassword.js" charset="utf8"></script> -->
+
+<script type="text/javascript" language="javascript">
+jQuery(document).ready(function($) {
+	
+	var tab_a = $('..logonTab dd');
+		tab_a.click(function(){
+			$(this).addClass('tabCur').siblings().removeClass();
+			var index = tab_a.index(this);
+			$('.ture-line-login').eq(index).show().siblings('.ture-line-login').hide();
+	});
+		
+	 $("#qrcodenew").hover(function(){
+		 if(!$('[identify-id="refreshQRcodeArea"]').is(':visible')){
+		    $(this).find("dt").stop(true).animate({left:"0px"},300);
+		    $("#qrcodenew dd").show(300);
+		 }
+		   },function(){
+			if(!$('[identify-id="refreshQRcodeArea"]').is(':visible')){
+			    $(this).find("dt").stop(true).animate({left:"67px"},300);
+			    $("#qrcodenew dd").hide();
+			   }
+	   });
+
+});
+</script>
+</body>
+</html>
